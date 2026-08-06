@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Gratitude</title>
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    body {
+      position: relative;
+
+      background-image: url("./assets/images/bg-1.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    button,
+    a {
+      font-family: inherit;
+    }
+
+    /* ========================================
+         PAGE CONTENT
+      ======================================== */
+
+    .gratitude-page {
+      position: absolute;
+      inset: 0;
+
+      width: 100%;
+      height: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 12vh 4vw 5vh;
+    }
+
+    .gratitude-content {
+      width: 100%;
+      height: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      gap: 0vw;
+    }
+
+    /* ========================================
+         LEFT CLOUD VIDEO
+      ======================================== */
+
+    .cloud-video-container {
+      position: relative;
+
+      width: 61%;
+      max-width: 62vw;
+
+      aspect-ratio: 1.7 / 1;
+
+      flex-shrink: 0;
+
+      filter: drop-shadow(0.7vw 0.8vw 0.35vw rgba(0, 70, 110, 0.35));
+    }
+
+    /* White outer cloud border */
+    .cloud-outer-layer {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+
+      width: 100%;
+      height: 100%;
+
+      background-color: #ffffff;
+
+      -webkit-mask-image: url("./assets/images/cloud1.png");
+      mask-image: url("./assets/images/cloud1.png");
+
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+
+      -webkit-mask-position: center;
+      mask-position: center;
+
+      -webkit-mask-size: contain;
+      mask-size: contain;
+
+      pointer-events: none;
+    }
+
+    /* Inner masked video */
+    .cloud-video-mask {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 2;
+
+      width: 97%;
+      height: 97%;
+
+      overflow: hidden;
+
+      transform: translate(-50%, -50%);
+
+      -webkit-mask-image: url("./assets/images/cloud1.png");
+      mask-image: url("./assets/images/cloud1.png");
+
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+
+      -webkit-mask-position: center;
+      mask-position: center;
+
+      -webkit-mask-size: contain;
+      mask-size: contain;
+
+      pointer-events: none;
+    }
+
+    .cloud-video-mask video {
+      width: 100%;
+      height: 100%;
+
+      display: block;
+
+      object-fit: cover;
+      object-position: center;
+
+      pointer-events: none;
+    }
+
+    /* ========================================
+         RIGHT DESCRIPTION BOX
+      ======================================== */
+
+    .description-box {
+      position: relative;
+      z-index: 5;
+
+      width: 38%;
+      min-height: 14vw;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 2.5vw 2vw;
+
+      border-radius: 2vw;
+
+      background: rgba(238, 255, 211, 0.9);
+
+      color: #005581;
+
+      font-family: "BalooDa", sans-serif;
+      font-size: 2vw;
+      font-weight: 800;
+      line-height: 1.45;
+      text-align: center;
+
+      box-shadow: 0 0.5vw 1vw rgba(0, 80, 120, 0.08);
+
+      user-select: none;
+      pointer-events: none;
+    }
+
+    body[data-lang="hi"] .description-box,
+    body[data-lang="gu"] .description-box {
+      font-size: 1.8vw;
+      line-height: 1.7;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Page title -->
+  <div class="page-title">
+    <span data-lang-key="title-1">
+      Gratitude
+    </span>
+  </div>
+
+  <!-- Home button -->
+  <a href="index.html" class="home-btn">
+    <img src="./assets/images/home.png" alt="Home" />
+  </a>
+
+  <div class="pages">
+    <a href="what-is-gratitude.html" class="page page-1">
+      <div class="page-content" data-lang-key="title-1"></div>
+      <div class="num num1" data-lang-key="num-1"></div>
+    </a>
+    <a href="grateful-for.html" class="page page-2">
+      <div class="page-content" data-lang-key="title-2"></div>
+      <div class="num num1" data-lang-key="num-2"></div>
+    </a>
+    <a href="whom.html" class="page page-3">
+      <div class="page-content" data-lang-key="title-3"></div>
+      <div class="num num1" data-lang-key="num-3"></div>
+    </a>
+  </div>
+
+  <!-- Language buttons -->
+  <div class="language-container">
+    <div class="english active">E</div>
+    <div class="hindi">H</div>
+    <div class="gujrati">G</div>
+  </div>
+
+  <!-- Single slide content -->
+  <main class="gratitude-page">
+    <section class="gratitude-content">
+      <!-- Cloud masked video -->
+      <div class="cloud-video-container">
+        <!-- White outer cloud layer -->
+        <div class="cloud-outer-layer"></div>
+
+        <!-- Video inside cloud mask -->
+        <div class="cloud-video-mask">
+          <video preload="auto" autoplay muted loop playsinline>
+            <source src="./assets/videos/1.mp4" type="video/mp4" />
+
+            Your browser does not support the video.
+          </video>
+        </div>
+      </div>
+
+      <!-- Description -->
+      <div class="description-box" data-lang-key="slide-1.1">
+        Gratitude is the quality of being thankful
+        for everything
+      </div>
+    </section>
+  </main>
+
+  <!-- Translation JavaScript -->
+  <script src="./assets/js/app.js"></script>
+
+  <!-- Audio Feedback JavaScript -->
+  <script>
+    (function () {
+      // Preload audio instances
+      const popAudio = new Audio("./assets/audio/pop.mp3");
+      const topicAudio = new Audio("./assets/audio/topic.mp3");
+      const swipeAudio = new Audio("./assets/audio/swipe.mp3");
+
+      popAudio.preload = "auto";
+      topicAudio.preload = "auto";
+      swipeAudio.preload = "auto";
+
+      /**
+       * Plays an audio clip and delays navigation for a link
+       * so the sound isn't cut off by the page change.
+       */
+      function playThenNavigate(e, audio, href, delay) {
+        e.preventDefault();
+
+        try {
+          audio.currentTime = 0;
+          audio.play();
+        } catch (err) {
+          // Fail silently if audio can't play (e.g. autoplay restrictions)
+        }
+
+        setTimeout(function () {
+          window.location.href = href;
+        }, delay);
+      }
+
+      // Home button -> pop.mp3
+      const homeBtn = document.querySelector(".home-btn");
+      if (homeBtn) {
+        homeBtn.addEventListener("click", function (e) {
+          playThenNavigate(e, popAudio, homeBtn.getAttribute("href"), 200);
+        });
+      }
+
+      // Topic pages (page-1, page-2, page-3) -> topic.mp3
+      const pageLinks = document.querySelectorAll(".pages .page");
+      pageLinks.forEach(function (link) {
+        link.addEventListener("click", function (e) {
+          playThenNavigate(e, topicAudio, link.getAttribute("href"), 200);
+        });
+      });
+
+      // Language navigation buttons -> swipe.mp3
+      const langButtons = document.querySelectorAll(
+        ".language-container .english, .language-container .hindi, .language-container .gujrati"
+      );
+      langButtons.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          try {
+            swipeAudio.currentTime = 0;
+            swipeAudio.play();
+          } catch (err) {
+            // Fail silently if audio can't play
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+
+</html>

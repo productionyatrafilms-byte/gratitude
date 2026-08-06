@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-lang-key="title"></title>
+
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
+</head>
+
+<style>
+  body {
+    background-image: url("./assets/images/bg.png");
+  }
+
+  .click {
+    position: absolute;
+    bottom: 10vw;
+    left: 50%;
+    transform: translateX(-50%) scale(1);
+    background-color: #FFDE72;
+    border: 0.3vw solid white;
+    padding: 0.1vw 2vw;
+    color: white;
+    font-family: "BalooDa";
+    font-size: 2vw;
+    text-shadow: 0.15vw 0.15vw 0.15vw rgba(0, 0, 0, 0.707);
+    border-radius: 2vw;
+    transition: transform 0.2s ease-in, background 0.2s ease-in, border 0.2s ease-in;
+    text-decoration: none;
+    z-index: 99999;
+    border: 0.3vw solid #f38c1d95;
+  }
+
+  .click:hover {
+    background-color: #f38c1d;
+    transform: translateX(-50%) scale(0.98);
+    cursor: pointer;
+    border: 0.3vw solid #FFDE72;
+  }
+
+  .hero {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) scale(1);
+    width: 70%;
+  }
+</style>
+
+<body>
+
+  <span class="title" data-lang-key="title"></span>
+
+  <a
+    href="what-is-gratitude.html"
+    class="click"
+    data-lang-key="click"
+  ></a>
+
+  <div class="language-container">
+    <div class="english active">E</div>
+    <div class="hindi">H</div>
+    <div class="gujrati">G</div>
+  </div>
+
+  <img src="./assets/videos/hero.gif" class="hero" alt="">
+
+  <!-- Click Audio -->
+  <audio id="clickAudio" preload="auto">
+    <source src="./assets/audio/click.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="./assets/js/swiper-bundle.min.js"></script>
+  <script src="./assets/js/app.js"></script>
+
+  <script>
+    const clickBtn = document.querySelector(".click");
+    const clickAudio = document.getElementById("clickAudio");
+
+    clickBtn.addEventListener("click", function (e) {
+      e.preventDefault(); // Prevent immediate navigation
+
+      clickAudio.currentTime = 0;
+      clickAudio.play().catch(() => {});
+
+      // Navigate after audio finishes (or after a short delay if playback fails)
+      const goNext = () => {
+        window.location.href = clickBtn.href;
+      };
+
+      clickAudio.onended = goNext;
+
+      setTimeout(() => {
+        if (document.visibilityState === "visible") {
+          goNext();
+        }
+      }, 1500); // Fallback timeout
+    });
+  </script>
+
+</body>
+
+</html>
