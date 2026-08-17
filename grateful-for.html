@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>What Should We Be Grateful For?</title>
@@ -24,25 +23,21 @@
         }
 
         /* ========================================
-         SWIPER AREA
-      ======================================== */
+           SWIPER AREA
+        ======================================== */
 
         .swiper-area {
             position: absolute;
             left: 0;
-
             width: 100vw;
             height: 100%;
         }
 
         .grateful-swiper {
             position: relative;
-
             width: 100%;
             height: 100%;
-
             overflow: hidden;
-
             touch-action: pan-x;
         }
 
@@ -63,21 +58,23 @@
         }
 
         /* ========================================
-         SLIDE CONTENT
-      ======================================== */
+           SLIDE CONTENT
+        ======================================== */
 
         .slide-content {
             width: 100%;
             height: 100%;
+
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 5vw;
 
+            gap: 5vw;
         }
 
         .content-card {
             width: 35%;
+
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -88,8 +85,8 @@
         }
 
         /* ========================================
-         CLOUD VIDEO
-      ======================================== */
+           CLOUD VIDEO
+        ======================================== */
 
         .cloud-video-wrapper {
             position: relative;
@@ -128,8 +125,10 @@
 
         .cloud-video-mask {
             position: absolute;
+
             top: 50%;
             left: 50%;
+
             z-index: 5;
 
             width: 97%;
@@ -167,8 +166,8 @@
         }
 
         /* ========================================
-         DESCRIPTION BOX
-      ======================================== */
+           DESCRIPTION BOX
+        ======================================== */
 
         .description-box {
             position: relative;
@@ -179,19 +178,28 @@
 
             margin-top: -1vw;
             padding: 2vh 2vw;
+
             display: flex;
             align-items: center;
             justify-content: center;
+
             border-radius: 2vw;
+
             background: #fbffc499;
+
             font-family: "BalooDa";
+
             box-shadow:
                 0 5px 10px rgba(0, 0, 0, 0.08);
+
             color: #005580;
+
             font-size: 1.5vw;
             font-weight: 800;
             line-height: 1.25;
+
             text-align: center;
+
             pointer-events: none;
         }
 
@@ -206,13 +214,19 @@
         }
 
         /* ========================================
-         NAVIGATION BUTTONS
-      ======================================== */
+           FIXED NAVIGATION BUTTONS
+        ======================================== */
 
         .swiper-prev-btn,
         .swiper-next-btn {
             position: absolute;
-            z-index: 60;
+
+            /*
+             * IMPORTANT:
+             * The buttons are outside .grateful-swiper,
+             * therefore they do not move with swiper slides.
+             */
+            z-index: 100;
 
             width: 5vw;
 
@@ -249,6 +263,7 @@
             height: 100%;
 
             display: block;
+
             object-fit: contain;
 
             pointer-events: none;
@@ -269,308 +284,442 @@
             cursor: default;
             pointer-events: none;
         }
-
     </style>
 </head>
 
 <body>
-    <!-- Page title -->
+
+    <!-- ========================================
+         PAGE TITLE
+    ======================================== -->
+
     <div class="page-title">
         <span data-lang-key="title-2">
             What should we be grateful for?
         </span>
     </div>
 
-    <!-- Home button -->
+
+    <!-- ========================================
+         HOME BUTTON
+    ======================================== -->
+
     <a href="index.html" class="home-btn">
         <img src="./assets/images/home.png" alt="Home" />
     </a>
 
-       <div class="pages">
-    <a href="what-is-gratitude.html" class="page page-1">
-      <div class="page-content" data-lang-key="title-1"></div>
-      <div class="num num1" data-lang-key="num-1"></div>
-    </a>
-    <a href="grateful-for.html" class="page page-2">
-      <div class="page-content" data-lang-key="title-2"></div>
-      <div class="num num1" data-lang-key="num-2"></div>
-    </a>
-    <a href="whom.html" class="page page-3">
-      <div class="page-content" data-lang-key="title-3"></div>
-      <div class="num num1" data-lang-key="num-3"></div>
-    </a>
-  </div>
 
-    <!-- Language buttons -->
+    <!-- ========================================
+         PAGE NAVIGATION
+    ======================================== -->
+
+    <div class="pages">
+
+        <a href="what-is-gratitude.html" class="page page-1">
+            <div class="page-content" data-lang-key="title-1">
+            </div>
+
+            <div class="num num1" data-lang-key="num-1">
+            </div>
+        </a>
+
+        <a href="grateful-for.html" class="page page-2">
+            <div class="page-content" data-lang-key="title-2">
+            </div>
+
+            <div class="num num1" data-lang-key="num-2">
+            </div>
+        </a>
+
+        <a href="whom.html" class="page page-3">
+            <div class="page-content" data-lang-key="title-3">
+            </div>
+
+            <div class="num num1" data-lang-key="num-3">
+            </div>
+        </a>
+
+    </div>
+
+
+    <!-- ========================================
+         LANGUAGE BUTTONS
+    ======================================== -->
+
     <div class="language-container">
         <div class="english active">E</div>
         <div class="hindi">H</div>
         <div class="gujrati">G</div>
     </div>
 
-    <!-- Swiper -->
+
+    <!-- ========================================
+         SWIPER AREA
+    ======================================== -->
+
     <main class="swiper-area">
+
+        <!--
+            Only this container moves/slides.
+            Navigation buttons are NOT inside it.
+        -->
+
         <div class="swiper grateful-swiper">
+
             <div class="swiper-wrapper">
-                <!-- ==================================
-               SLIDE 1
-          =================================== -->
 
-                <section class="swiper-slide">
-                    <div class="slide-content">
-                        <!-- Card 1 -->
-                        <article class="content-card">
-                            <div class="cloud-video-wrapper">
-                                <div class="cloud-outer-layer"></div>
-
-                                <div class="cloud-video-mask">
-                                    <video preload="auto" autoplay muted loop playsinline>
-                                        <source src="./assets/videos/2-1.mp4" type="video/mp4" />
-
-                                        Your browser does not support video.
-                                    </video>
-                                </div>
-                            </div>
-
-                            <div class="description-box" data-lang-key="slide-2.1">
-                                Many living beings do not have eyes,
-                                ears, nose and mouth
-                            </div>
-                        </article>
-
-                        <!-- Card 2 -->
-                        <article class="content-card">
-                            <div class="cloud-video-wrapper">
-                                <div class="cloud-outer-layer"></div>
-
-                                <div class="cloud-video-mask">
-                                    <video preload="auto" autoplay muted loop playsinline>
-                                        <source src="./assets/videos/2-2.mp4" type="video/mp4" />
-
-                                        Your browser does not support video.
-                                    </video>
-                                </div>
-                            </div>
-
-                            <div class="description-box" data-lang-key="slide-2.2">
-                                We have the ability to see, hear,
-                                smell and speak
-                            </div>
-                        </article>
-                    </div>
-                </section>
 
                 <!-- ==================================
-               SLIDE 2
-          =================================== -->
+                     SLIDE 4
+                =================================== -->
 
                 <section class="swiper-slide">
+
                     <div class="slide-content">
+
                         <!-- Card 1 -->
+
                         <article class="content-card">
+
                             <div class="cloud-video-wrapper">
+
                                 <div class="cloud-outer-layer"></div>
 
                                 <div class="cloud-video-mask">
+
                                     <video preload="auto" autoplay muted loop playsinline>
-                                        <source src="./assets/videos/2-3.mp4" type="video/mp4" />
+
+                                        <source src="./assets/videos/2-7.mp4" type="video/mp4" />
 
                                         Your browser does not support video.
+
                                     </video>
+
                                 </div>
-                            </div>
 
-                            <div class="description-box" data-lang-key="slide-2.3">
-                                We should be grateful for healthy food
-                                and clean water
-                            </div>
-                        </article>
-
-                        <!-- Card 2 -->
-                        <article class="content-card">
-                            <div class="cloud-video-wrapper">
-                                <div class="cloud-outer-layer"></div>
-
-                                <div class="cloud-video-mask">
-                                    <video preload="auto" autoplay muted loop playsinline>
-                                        <source src="./assets/videos/2-4.mp4" type="video/mp4" />
-
-                                        Your browser does not support video.
-                                    </video>
-                                </div>
-                            </div>
-
-                            <div class="description-box" data-lang-key="slide-2.4">
-                                We should be grateful for our family,
-                                teachers and friends
-                            </div>
-                        </article>
-                    </div>
-                </section>
-
-                <!-- ==================================
-               SLIDE 3
-          =================================== -->
-
-                <section class="swiper-slide">
-                    <div class="slide-content">
-                        <!-- Card 1 -->
-                        <article class="content-card">
-                            <div class="cloud-video-wrapper">
-                                <div class="cloud-outer-layer"></div>
-
-                                <div class="cloud-video-mask">
-                                    <video preload="auto" autoplay muted loop playsinline>
-                                        <source src="./assets/videos/2-5.mp4" type="video/mp4" />
-
-                                        Your browser does not support video.
-                                    </video>
-                                </div>
-                            </div>
-
-                            <div class="description-box" data-lang-key="slide-2.5">
-                                Nature gives us air, sunlight, plants
-                                and shelter
-                            </div>
-                        </article>
-
-                        <!-- Card 2 -->
-                        <article class="content-card">
-                            <div class="cloud-video-wrapper">
-                                <div class="cloud-outer-layer"></div>
-
-                                <div class="cloud-video-mask">
-                                    <video preload="auto" autoplay muted loop playsinline>
-                                        <source src="./assets/videos/2-6.mp4" type="video/mp4" />
-
-                                        Your browser does not support video.
-                                    </video>
-                                </div>
-                            </div>
-
-                            <div class="description-box" data-lang-key="slide-2.6">
-                                We must respect and protect every
-                                living being
-                            </div>
-                        </article>
-                    </div>
-                </section>
-
-                <!-- ==================================
-               SLIDE 4
-          =================================== -->
-
-                <section class="swiper-slide">
-                    <div class="slide-content">
-                        <!-- Card 1 -->
-                        <article class="content-card">
-                            <div class="cloud-video-wrapper">
-                                <div class="cloud-outer-layer"></div>
-
-                                <div class="cloud-video-mask">
-                                    <video preload="auto" autoplay muted loop playsinline>
-                                        <source src="./assets/videos/pranam.mp4" type="video/mp4" />
-
-                                        Your browser does not support video.
-                                    </video>
-                                </div>
                             </div>
 
                             <div class="description-box" data-lang-key="slide-2.7">
+
                                 We should be grateful for having a
                                 safe and comfortable home
+
                             </div>
+
                         </article>
 
+
                         <!-- Card 2 -->
+
                         <article class="content-card">
+
                             <div class="cloud-video-wrapper">
+
                                 <div class="cloud-outer-layer"></div>
 
                                 <div class="cloud-video-mask">
+
                                     <video preload="auto" autoplay muted loop playsinline>
-                                        <source src="./assets/videos/pranam.mp4" type="video/mp4" />
+
+                                        <source src="./assets/videos/2-8.mp4" type="video/mp4" />
 
                                         Your browser does not support video.
+
                                     </video>
+
                                 </div>
+
                             </div>
 
                             <div class="description-box" data-lang-key="slide-2.8">
+
                                 We should be grateful for education
                                 and the opportunity to learn
+
                             </div>
+
                         </article>
+
                     </div>
+
                 </section>
+
 
                 <!-- ==================================
-               SLIDE 5
-          =================================== -->
+                     SLIDE 1
+                =================================== -->
 
                 <section class="swiper-slide">
+
                     <div class="slide-content">
+
                         <!-- Card 1 -->
+
                         <article class="content-card">
+
                             <div class="cloud-video-wrapper">
+
                                 <div class="cloud-outer-layer"></div>
 
                                 <div class="cloud-video-mask">
+
                                     <video preload="auto" autoplay muted loop playsinline>
-                                        <source src="./assets/videos/pranam.mp4" type="video/mp4" />
+
+                                        <source src="./assets/videos/2-1.mp4" type="video/mp4" />
 
                                         Your browser does not support video.
+
                                     </video>
+
                                 </div>
+
                             </div>
 
-                            <div class="description-box" data-lang-key="slide-2.9">
-                                We should be grateful for our healthy
-                                body and all its abilities
+                            <div class="description-box" data-lang-key="slide-2.1">
+
+                                Many living beings do not have eyes,
+                                ears, nose and mouth
+
                             </div>
+
                         </article>
+
 
                         <!-- Card 2 -->
+
                         <article class="content-card">
+
                             <div class="cloud-video-wrapper">
+
                                 <div class="cloud-outer-layer"></div>
 
                                 <div class="cloud-video-mask">
+
                                     <video preload="auto" autoplay muted loop playsinline>
-                                        <source src="./assets/videos/pranam.mp4" type="video/mp4" />
+
+                                        <source src="./assets/videos/2-2.mp4" type="video/mp4" />
 
                                         Your browser does not support video.
+
                                     </video>
+
                                 </div>
+
                             </div>
 
-                            <div class="description-box" data-lang-key="slide-2.10">
-                                Gratitude teaches us to value and care
-                                for everything we have
+                            <div class="description-box" data-lang-key="slide-2.2">
+
+                                We have the ability to see, hear,
+                                smell and speak
+
                             </div>
+
                         </article>
+
                     </div>
+
                 </section>
+
+
+                <!-- ==================================
+                     SLIDE 2
+                =================================== -->
+
+                <section class="swiper-slide">
+
+                    <div class="slide-content">
+
+                        <!-- Card 1 -->
+
+                        <article class="content-card">
+
+                            <div class="cloud-video-wrapper">
+
+                                <div class="cloud-outer-layer"></div>
+
+                                <div class="cloud-video-mask">
+
+                                    <video preload="auto" autoplay muted loop playsinline>
+
+                                        <source src="./assets/videos/2-3.mp4" type="video/mp4" />
+
+                                        Your browser does not support video.
+
+                                    </video>
+
+                                </div>
+
+                            </div>
+
+                            <div class="description-box" data-lang-key="slide-2.3">
+
+                                We should be grateful for healthy food
+                                and clean water
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- Card 2 -->
+
+                        <article class="content-card">
+
+                            <div class="cloud-video-wrapper">
+
+                                <div class="cloud-outer-layer"></div>
+
+                                <div class="cloud-video-mask">
+
+                                    <video preload="auto" autoplay muted loop playsinline>
+
+                                        <source src="./assets/videos/2-4.mp4" type="video/mp4" />
+
+                                        Your browser does not support video.
+
+                                    </video>
+
+                                </div>
+
+                            </div>
+
+                            <div class="description-box" data-lang-key="slide-2.4">
+
+                                We should be grateful for our family,
+                                teachers and friends
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ==================================
+                     SLIDE 3
+                =================================== -->
+
+                <section class="swiper-slide">
+
+                    <div class="slide-content">
+
+                        <!-- Card 1 -->
+
+                        <article class="content-card">
+
+                            <div class="cloud-video-wrapper">
+
+                                <div class="cloud-outer-layer"></div>
+
+                                <div class="cloud-video-mask">
+
+                                    <video preload="auto" autoplay muted loop playsinline>
+
+                                        <source src="./assets/videos/2-5.mp4" type="video/mp4" />
+
+                                        Your browser does not support video.
+
+                                    </video>
+
+                                </div>
+
+                            </div>
+
+                            <div class="description-box" data-lang-key="slide-2.5">
+
+                                Nature gives us air, sunlight, plants
+                                and shelter
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- Card 2 -->
+
+                        <article class="content-card">
+
+                            <div class="cloud-video-wrapper">
+
+                                <div class="cloud-outer-layer"></div>
+
+                                <div class="cloud-video-mask">
+
+                                    <video preload="auto" autoplay muted loop playsinline>
+
+                                        <source src="./assets/videos/2-6.mp4" type="video/mp4" />
+
+                                        Your browser does not support video.
+
+                                    </video>
+
+                                </div>
+
+                            </div>
+
+                            <div class="description-box" data-lang-key="slide-2.6">
+
+                                We must respect and protect every
+                                living being
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+
             </div>
+            <!-- END .swiper-wrapper -->
 
-
-            <!-- Previous button -->
-            <button class="swiper-prev-btn" type="button" aria-label="Previous slide">
-                <img src="./assets/images/prev-btn.png" alt="Previous" />
-            </button>
-
-            <!-- Next button -->
-            <button class="swiper-next-btn" type="button" aria-label="Next slide">
-                <img src="./assets/images/next-btn.png" alt="Next" />
-            </button>
         </div>
+        <!-- END .grateful-swiper -->
+
+
+        <!-- ========================================
+             FIXED SWIPER NAVIGATION
+
+             IMPORTANT:
+             These are outside .grateful-swiper.
+             Therefore they will NOT slide.
+        ======================================== -->
+
+        <button class="swiper-prev-btn" type="button" aria-label="Previous slide">
+
+            <img src="./assets/images/prev-btn.png" alt="Previous" />
+
+        </button>
+
+
+        <button class="swiper-next-btn" type="button" aria-label="Next slide">
+
+            <img src="./assets/images/next-btn.png" alt="Next" />
+
+        </button>
+
     </main>
 
-    <!-- Local Swiper JavaScript -->
+
+    <!-- ========================================
+         LOCAL SWIPER JAVASCRIPT
+    ======================================== -->
+
     <script src="./assets/js/swiper-bundle.min.js"></script>
+    <script src="./assets/js/djp.js"></script>
+
+
+    <!-- ========================================
+         SWIPER INITIALIZATION
+    ======================================== -->
 
     <script>
+
         window.addEventListener("load", function () {
+
             const swiperElement =
                 document.querySelector(".grateful-swiper");
 
@@ -583,22 +732,35 @@
             const paginationElement =
                 document.querySelector(".swiper-pagination");
 
+
+            /* ======================================
+               CHECK SWIPER
+            ====================================== */
+
             if (typeof Swiper === "undefined") {
+
                 console.error(
                     "Swiper is not loaded. Check this file path: " +
-                    "./assets/js/swiper-bundle.min.js",
+                    "./assets/js/swiper-bundle.min.js"
                 );
 
                 return;
             }
+
+
+            /* ======================================
+               CHECK SWIPER ELEMENT
+            ====================================== */
 
             if (!swiperElement) {
+
                 console.error(
-                    "The .grateful-swiper element was not found.",
+                    "The .grateful-swiper element was not found."
                 );
 
                 return;
             }
+
 
             /* ======================================
                INITIALIZE SWIPER
@@ -607,6 +769,7 @@
             const gratefulSwiper = new Swiper(
                 swiperElement,
                 {
+
                     direction: "vertical",
 
                     slidesPerView: 1,
@@ -651,6 +814,11 @@
 
                     watchOverflow: true,
 
+
+                    /* ==============================
+                       MOUSE WHEEL
+                    ============================== */
+
                     mousewheel: {
                         enabled: true,
                         forceToAxis: true,
@@ -658,122 +826,273 @@
                         releaseOnEdges: true,
                     },
 
+
+                    /* ==============================
+                       KEYBOARD
+                    ============================== */
+
                     keyboard: {
                         enabled: true,
                         onlyInViewport: true,
                         pageUpDown: true,
                     },
 
+
+                    /* ==============================
+                       NAVIGATION
+
+                       Buttons can be outside Swiper.
+                    ============================== */
+
                     navigation: {
                         nextEl: nextButton,
                         prevEl: previousButton,
                     },
+
+
+                    /* ==============================
+                       PAGINATION
+                    ============================== */
 
                     pagination: {
                         el: paginationElement,
                         clickable: true,
                     },
 
+
+                    /* ==============================
+                       EVENTS
+                    ============================== */
+
                     on: {
+
                         init: function () {
+
                             console.log(
-                                "Swiper initialized successfully.",
+                                "Swiper initialized successfully."
                             );
+
                         },
+
                     },
-                },
+
+                }
             );
+
+
+            /* ======================================
+               UPDATE SWIPER
+            ====================================== */
 
             requestAnimationFrame(function () {
                 gratefulSwiper.update();
             });
 
+
             setTimeout(function () {
                 gratefulSwiper.update();
             }, 200);
+
         });
+
     </script>
 
-    <!-- Translation JavaScript -->
+
+    <!-- ========================================
+         TRANSLATION JAVASCRIPT
+    ======================================== -->
+
     <script src="./assets/js/app.js"></script>
 
-    <!-- Audio Feedback JavaScript -->
+
+    <!-- ========================================
+         AUDIO FEEDBACK JAVASCRIPT
+    ======================================== -->
+
     <script>
+
         (function () {
-            // Preload audio instances
-            const popAudio = new Audio("./assets/audio/pop.mp3");
-            const topicAudio = new Audio("./assets/audio/topic.mp3");
-            const swipeAudio = new Audio("./assets/audio/swipe.mp3");
+
+            /* ==============================
+               PRELOAD AUDIO
+            ============================== */
+
+            const popAudio =
+                new Audio("./assets/audio/pop.mp3");
+
+            const topicAudio =
+                new Audio("./assets/audio/topic.mp3");
+
+            const swipeAudio =
+                new Audio("./assets/audio/swipe.mp3");
+
 
             popAudio.preload = "auto";
             topicAudio.preload = "auto";
             swipeAudio.preload = "auto";
 
-            /**
-             * Plays an audio clip and delays navigation for a link
-             * so the sound isn't cut off by the page change.
-             */
-            function playThenNavigate(e, audio, href, delay) {
+
+            /* ==============================
+               PLAY THEN NAVIGATE
+            ============================== */
+
+            function playThenNavigate(
+                e,
+                audio,
+                href,
+                delay
+            ) {
+
                 e.preventDefault();
 
                 try {
+
                     audio.currentTime = 0;
                     audio.play();
+
                 } catch (err) {
-                    // Fail silently if audio can't play (e.g. autoplay restrictions)
+
+                    // Fail silently if audio can't play
+
                 }
+
 
                 setTimeout(function () {
+
                     window.location.href = href;
+
                 }, delay);
+
             }
+
+
+            /* ==============================
+               PLAY SOUND
+            ============================== */
 
             function playSound(audio) {
+
                 try {
+
                     audio.currentTime = 0;
                     audio.play();
+
                 } catch (err) {
+
                     // Fail silently if audio can't play
+
                 }
+
             }
 
-            // Home button -> pop.mp3
-            const homeBtn = document.querySelector(".home-btn");
+
+            /* ==============================
+               HOME BUTTON
+            ============================== */
+
+            const homeBtn =
+                document.querySelector(".home-btn");
+
             if (homeBtn) {
-                homeBtn.addEventListener("click", function (e) {
-                    playThenNavigate(e, popAudio, homeBtn.getAttribute("href"), 200);
-                });
+
+                homeBtn.addEventListener(
+                    "click",
+                    function (e) {
+
+                        playThenNavigate(
+                            e,
+                            popAudio,
+                            homeBtn.getAttribute("href"),
+                            200
+                        );
+
+                    }
+                );
+
             }
 
-            // Topic pages (page-1, page-2, page-3) -> topic.mp3
-            const pageLinks = document.querySelectorAll(".pages .page");
+
+            /* ==============================
+               TOPIC PAGE BUTTONS
+            ============================== */
+
+            const pageLinks =
+                document.querySelectorAll(
+                    ".pages .page"
+                );
+
             pageLinks.forEach(function (link) {
-                link.addEventListener("click", function (e) {
-                    playThenNavigate(e, topicAudio, link.getAttribute("href"), 200);
-                });
+
+                link.addEventListener(
+                    "click",
+                    function (e) {
+
+                        playThenNavigate(
+                            e,
+                            topicAudio,
+                            link.getAttribute("href"),
+                            200
+                        );
+
+                    }
+                );
+
             });
 
-            // Language navigation buttons -> swipe.mp3
-            const langButtons = document.querySelectorAll(
-                ".language-container .english, .language-container .hindi, .language-container .gujrati"
-            );
+
+            /* ==============================
+               LANGUAGE BUTTONS
+            ============================== */
+
+            const langButtons =
+                document.querySelectorAll(
+                    ".language-container .english, " +
+                    ".language-container .hindi, " +
+                    ".language-container .gujrati"
+                );
+
+
             langButtons.forEach(function (btn) {
-                btn.addEventListener("click", function () {
-                    playSound(swipeAudio);
-                });
+
+                btn.addEventListener(
+                    "click",
+                    function () {
+
+                        playSound(swipeAudio);
+
+                    }
+                );
+
             });
 
-            // Swiper prev/next navigation buttons -> swipe.mp3
-            const swiperNavButtons = document.querySelectorAll(
-                ".swiper-prev-btn, .swiper-next-btn"
-            );
+
+            /* ==============================
+               SWIPER PREV / NEXT BUTTONS
+            ============================== */
+
+            const swiperNavButtons =
+                document.querySelectorAll(
+                    ".swiper-prev-btn, .swiper-next-btn"
+                );
+
+
             swiperNavButtons.forEach(function (btn) {
-                btn.addEventListener("click", function () {
-                    playSound(swipeAudio);
-                });
+
+                btn.addEventListener(
+                    "click",
+                    function () {
+
+                        playSound(swipeAudio);
+
+                    }
+                );
+
             });
+
         })();
+
     </script>
+
 </body>
 
 </html>

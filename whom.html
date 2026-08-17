@@ -1,26 +1,18 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Whom Should We Be Grateful To?</title>
 
     <!-- Local Swiper CSS -->
-    <link
-        rel="stylesheet"
-        href="./assets/css/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
 
     <!-- Main CSS -->
-    <link
-        rel="stylesheet"
-        href="./assets/css/style.css"
-    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
 
     <style>
         body {
@@ -61,7 +53,7 @@
             touch-action: pan-x;
         }
 
-        .grateful-swiper > .swiper-wrapper {
+        .grateful-swiper>.swiper-wrapper {
             width: 100%;
             height: 100%;
         }
@@ -89,7 +81,7 @@
 
             width: 100%;
             height: 90%;
-            
+
         }
 
         .content-card {
@@ -118,9 +110,7 @@
             align-items: center;
             justify-content: center;
 
-            filter: drop-shadow(
-                0 0.45vw 0.35vw rgba(0, 0, 0, 0.22)
-            );
+            filter: drop-shadow(0 0.45vw 0.35vw rgba(0, 0, 0, 0.22));
         }
 
         .cloud-outer-layer {
@@ -261,7 +251,7 @@
 
         /* ========================================
            LAYOUT A
-           Used on slides 1 and 2
+           Used on slides 1, 2 and 3
         ======================================== */
 
         .layout-a .large-left {
@@ -271,14 +261,14 @@
         }
 
         .layout-a .small-top {
-            top: 12%;
-            left: 55%;
+            top: 13%;
+            left: 50%;
 
-           width: 18%;
+            width: 18%;
         }
 
         .layout-a .small-right {
-            top: 30%;
+            top: 13%;
             right: 2.5%;
 
             width: 18%;
@@ -286,14 +276,14 @@
 
         .layout-a .small-bottom {
             top: 58%;
-            left: 55%;
+            left: 65%;
 
-           width: 18%;
+            width: 18%;
         }
 
         /* ========================================
            LAYOUT B
-           Used on slides 3, 5 and 6
+           Used on slides 5 and 6
         ======================================== */
 
         .layout-b .top-left {
@@ -484,70 +474,69 @@
         }
 
         .pranam-link {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    right: 2vw;
-    bottom: 2vw;
-    width: 9vw;
-    height: auto;
-    text-decoration: none;
-    z-index: 9999;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    cursor: pointer;
-    animation: pranamPop 1.2s ease-in-out infinite;
-    transform-origin: center;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-  }
-    
-.pranam-link img {
-  position: relative;
-  width: 100%;
-  display: block;
-  object-fit: contain;
-}
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            right: 2vw;
+            bottom: 2vw;
+            width: 9vw;
+            height: auto;
+            text-decoration: none;
+            z-index: 9999;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            cursor: pointer;
+            animation: pranamPop 1.2s ease-in-out infinite;
+            transform-origin: center;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
 
-.pranam-link span {
-  position: absolute;
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  font-size: 1.3vw;
-  padding-right: 1vw;
-    font-family: "BalooRegular";
+        .pranam-link img {
+            position: relative;
+            width: 100%;
+            display: block;
+            object-fit: contain;
+        }
 
-}
+        .pranam-link span {
+            position: absolute;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 1.3vw;
+            padding-right: 1vw;
+            font-family: "BalooRegular";
 
-@keyframes pranamPop {
-  0% {
-    transform: scale(1);
-  }
+        }
 
-  50% {
-    transform: scale(1.12);
-  }
+        @keyframes pranamPop {
+            0% {
+                transform: scale(1);
+            }
 
-  100% {
-    transform: scale(1);
-  }
-}
+            50% {
+                transform: scale(1.12);
+            }
 
-  .pranam-link.show {
-        opacity: 1;
-        visibility: visible;
-        pointer-events: auto;
-      }
+            100% {
+                transform: scale(1);
+            }
+        }
 
+        .pranam-link.show {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
     </style>
 </head>
 
 <body>
-     <a href="pranam.html" class="pranam-link">
-      <img src="./assets/images/arowAsset.png" alt="" />
-      <span data-lang-key="pranam"></span>
+    <a href="pranam.html" class="pranam-link">
+        <img src="./assets/images/arowAsset.png" alt="" />
+        <span data-lang-key="pranam"></span>
     </a>
     <!-- Page title -->
     <div class="page-title">
@@ -560,20 +549,20 @@
         <img src="./assets/images/home.png" alt="Home" />
     </a>
 
-<div class="pages">
-    <a href="what-is-gratitude.html" class="page page-1">
-      <div class="page-content" data-lang-key="title-1"></div>
-      <div class="num num1" data-lang-key="num-1"></div>
-    </a>
-    <a href="grateful-for.html" class="page page-2">
-      <div class="page-content" data-lang-key="title-2"></div>
-      <div class="num num1" data-lang-key="num-2"></div>
-    </a>
-    <a href="whom.html" class="page page-3">
-      <div class="page-content" data-lang-key="title-3"></div>
-      <div class="num num1" data-lang-key="num-3"></div>
-    </a>
-  </div>
+    <div class="pages">
+        <a href="what-is-gratitude.html" class="page page-1">
+            <div class="page-content" data-lang-key="title-1"></div>
+            <div class="num num1" data-lang-key="num-1"></div>
+        </a>
+        <a href="grateful-for.html" class="page page-2">
+            <div class="page-content" data-lang-key="title-2"></div>
+            <div class="num num1" data-lang-key="num-2"></div>
+        </a>
+        <a href="whom.html" class="page page-3">
+            <div class="page-content" data-lang-key="title-3"></div>
+            <div class="num num1" data-lang-key="num-3"></div>
+        </a>
+    </div>
 
     <!-- Language buttons -->
     <div class="language-container">
@@ -597,125 +586,69 @@
                     <div class="slide-content layout-a">
 
                         <!-- Large left cloud -->
-                        <article
-                            class="content-card large-card large-left cloud-type-2"
-                        >
+                        <article class="content-card large-card large-left cloud-type-2">
                             <div class="cloud-video-wrapper">
                                 <div class="cloud-outer-layer"></div>
 
                                 <div class="cloud-video-mask">
-                                    <video
-                                        preload="auto"
-                                        autoplay
-                                        muted
-                                        loop
-                                        playsinline
-                                    >
-                                        <source
-                                            src="./assets/videos/3-18.mp4"
-                                            type="video/mp4"
-                                        />
+                                    <video preload="auto" autoplay muted loop playsinline>
+                                        <source src="./assets/videos/3-18.mp4" type="video/mp4" />
                                     </video>
                                 </div>
                             </div>
 
-                            <div
-                                class="description-box"
-                                data-lang-key="slide-3.1"
-                            >
+                            <div class="description-box" data-lang-key="slide-3.1">
                                 Thank you Parents
                             </div>
                         </article>
 
                         <!-- Top small cloud -->
-                        <article
-                            class="content-card small-top cloud-type-2"
-                        >
+                        <article class="content-card small-top cloud-type-2">
                             <div class="cloud-video-wrapper">
                                 <div class="cloud-outer-layer"></div>
 
                                 <div class="cloud-video-mask">
-                                    <video
-                                        preload="auto"
-                                        autoplay
-                                        muted
-                                        loop
-                                        playsinline
-                                    >
-                                        <source
-                                             src="./assets/videos/3-19.mp4"
-                                            type="video/mp4"
-                                        />
+                                    <video preload="auto" autoplay muted loop playsinline>
+                                        <source src="./assets/videos/3-20.mp4" type="video/mp4" />
                                     </video>
                                 </div>
                             </div>
 
-                            <div
-                                class="description-box"
-                                data-lang-key="slide-3.2"
-                            >
+                            <div class="description-box" data-lang-key="slide-3.2">
                                 For taking care of us
                             </div>
                         </article>
 
                         <!-- Rightmost small cloud -->
-                        <article
-                            class="content-card small-right cloud-type-3"
-                        >
+                        <article class="content-card small-right cloud-type-3">
                             <div class="cloud-video-wrapper">
                                 <div class="cloud-outer-layer"></div>
 
                                 <div class="cloud-video-mask">
-                                    <video
-                                        preload="auto"
-                                        autoplay
-                                        muted
-                                        loop
-                                        playsinline
-                                    >
-                                        <source
-                                            src="./assets/videos/3-21.mp4"
-                                            type="video/mp4"
-                                        />
+                                    <video preload="auto" autoplay muted loop playsinline>
+                                        <source src="./assets/videos/3-21.mp4" type="video/mp4" />
                                     </video>
                                 </div>
                             </div>
 
-                            <div
-                                class="description-box"
-                                data-lang-key="slide-3.3"
-                            >
+                            <div class="description-box" data-lang-key="slide-3.3">
                                 Good Values
                             </div>
                         </article>
 
                         <!-- Bottom small cloud -->
-                        <article
-                            class="content-card small-bottom cloud-type-2"
-                        >
+                        <article class="content-card small-bottom cloud-type-2">
                             <div class="cloud-video-wrapper">
                                 <div class="cloud-outer-layer"></div>
 
                                 <div class="cloud-video-mask">
-                                    <video
-                                        preload="auto"
-                                        autoplay
-                                        muted
-                                        loop
-                                        playsinline
-                                    >
-                                        <source
-                                             src="./assets/videos/3-20.mp4"
-                                            type="video/mp4"
-                                        />
+                                    <video preload="auto" autoplay muted loop playsinline>
+                                        <source src="./assets/videos/3-19.mp4" type="video/mp4" />
                                     </video>
                                 </div>
                             </div>
 
-                            <div
-                                class="description-box"
-                                data-lang-key="slide-3.4"
-                            >
+                            <div class="description-box" data-lang-key="slide-3.4">
                                 Good Health
                             </div>
                         </article>
@@ -731,123 +664,51 @@
                 <section class="swiper-slide">
                     <div class="slide-content layout-a">
 
-                        <article
-                            class="content-card large-card large-left cloud-type-2"
-                        >
+                        <article class="content-card large-card large-left cloud-type-2">
                             <div class="cloud-video-wrapper">
                                 <div class="cloud-outer-layer"></div>
 
                                 <div class="cloud-video-mask">
-                                    <video
-                                        preload="auto"
-                                        autoplay
-                                        muted
-                                        loop
-                                        playsinline
-                                    >
-                                        <source
-                                             src="./assets/videos/3-22.mp4"
-                                            type="video/mp4"
-                                        />
+                                    <video preload="auto" autoplay muted loop playsinline>
+                                        <source src="./assets/videos/3-22.mp4" type="video/mp4" />
                                     </video>
                                 </div>
                             </div>
 
-                            <div
-                                class="description-box"
-                                data-lang-key="slide-3.5"
-                            >
+                            <div class="description-box" data-lang-key="slide-3.5">
                                 Thank you Family
                             </div>
                         </article>
 
-                        <article
-                            class="content-card small-top cloud-type-2"
-                        >
+                        <article class="content-card small-top cloud-type-2" style="top: 30%;">
                             <div class="cloud-video-wrapper">
                                 <div class="cloud-outer-layer"></div>
 
                                 <div class="cloud-video-mask">
-                                    <video
-                                        preload="auto"
-                                        autoplay
-                                        muted
-                                        loop
-                                        playsinline
-                                    >
-                                        <source
-                                          src="./assets/videos/3-23.mp4"
-                                            type="video/mp4"
-                                        />
+                                    <video preload="auto" autoplay muted loop playsinline>
+                                        <source src="./assets/videos/3-23.mp4" type="video/mp4" />
                                     </video>
                                 </div>
                             </div>
 
-                            <div
-                                class="description-box"
-                                data-lang-key="slide-3.6"
-                            >
+                            <div class="description-box" data-lang-key="slide-3.6">
                                 Love and Care
                             </div>
                         </article>
 
-                        <article
-                            class="content-card small-right cloud-type-3"
-                        >
+                        <article style="top:30%!important" class="content-card small-right cloud-type-3">
                             <div class="cloud-video-wrapper">
                                 <div class="cloud-outer-layer"></div>
 
                                 <div class="cloud-video-mask">
-                                    <video
-                                        preload="auto"
-                                        autoplay
-                                        muted
-                                        loop
-                                        playsinline
-                                    >
-                                        <source
-                                             src="./assets/videos/3-25.mp4"
-                                            type="video/mp4"
-                                        />
+                                    <video preload="auto" autoplay muted loop playsinline>
+                                        <source src="./assets/videos/3-26.mp4" type="video/mp4" />
                                     </video>
                                 </div>
                             </div>
 
-                            <div
-                                class="description-box"
-                                data-lang-key="slide-3.7"
-                            >
+                            <div class="description-box" data-lang-key="slide-3.7">
                                 Guidance
-                            </div>
-                        </article>
-
-                        <article
-                            class="content-card small-bottom cloud-type-2"
-                        >
-                            <div class="cloud-video-wrapper">
-                                <div class="cloud-outer-layer"></div>
-
-                                <div class="cloud-video-mask">
-                                    <video
-                                        preload="auto"
-                                        autoplay
-                                        muted
-                                        loop
-                                        playsinline
-                                    >
-                                        <source
-                                             src="./assets/videos/3-24.mp4"
-                                            type="video/mp4"
-                                        />
-                                    </video>
-                                </div>
-                            </div>
-
-                            <div
-                                class="description-box"
-                                data-lang-key="slide-3.8"
-                            >
-                                Protection
                             </div>
                         </article>
 
@@ -855,130 +716,77 @@
                 </section>
 
                 <!-- ==================================
-                     SLIDE 3 — LAYOUT B
+                     SLIDE 3 — LAYOUT A
                      slide-3.9 to slide-3.12
                 =================================== -->
 
                 <section class="swiper-slide">
-                    <div class="slide-content layout-b">
+                    <div class="slide-content layout-a">
 
-                        <article
-                            class="content-card top-left cloud-type-2"
-                        >
+                        <!-- Large left cloud -->
+                        <article class="content-card large-card large-left cloud-type-2">
                             <div class="cloud-video-wrapper">
                                 <div class="cloud-outer-layer"></div>
 
                                 <div class="cloud-video-mask">
-                                    <video
-                                        preload="auto"
-                                        autoplay
-                                        muted
-                                        loop
-                                        playsinline
-                                    >
-                                        <source
-                                            src="./assets/videos/3-2.mp4"
-                                            type="video/mp4"
-                                        />
+                                    <video preload="auto" autoplay muted loop playsinline>
+                                        <source src="./assets/videos/3-25.mp4" type="video/mp4" />
                                     </video>
                                 </div>
                             </div>
 
-                            <div
-                                class="description-box"
-                                data-lang-key="slide-3.10"
-                            >
+                            <div class="description-box" data-lang-key="also">
+                            </div>
+                        </article>
+
+                        <!-- Top small cloud -->
+                        <article class="content-card small-top cloud-type-2">
+                            <div class="cloud-video-wrapper">
+                                <div class="cloud-outer-layer"></div>
+
+                                <div class="cloud-video-mask">
+                                    <video preload="auto" autoplay muted loop playsinline>
+                                        <source src="./assets/videos/3-1.mp4" type="video/mp4" />
+                                    </video>
+                                </div>
+                            </div>
+
+                            <div class="description-box" data-lang-key="slide-3.9">
                                 Siblings
                             </div>
                         </article>
 
-                        <article
-                            class="content-card top-right cloud-type-3"
-                        >
+                        <!-- Rightmost small cloud -->
+                        <article class="content-card small-right cloud-type-3">
                             <div class="cloud-video-wrapper">
                                 <div class="cloud-outer-layer"></div>
 
                                 <div class="cloud-video-mask">
-                                    <video
-                                        preload="auto"
-                                        autoplay
-                                        muted
-                                        loop
-                                        playsinline
-                                    >
-                                        <source
-                                            src="./assets/videos/3-3.mp4"
-                                            type="video/mp4"
-                                        />
+                                    <video preload="auto" autoplay muted loop playsinline>
+                                        <source src="./assets/videos/3-2.mp4" type="video/mp4" />
                                     </video>
                                 </div>
                             </div>
 
-                            <div
-                                class="description-box"
-                                data-lang-key="slide-3.12"
-                            >
-                                Neighbours
-                            </div>
-                        </article>
-
-                        <article
-                            class="content-card bottom-left cloud-type-2"
-                        >
-                            <div class="cloud-video-wrapper">
-                                <div class="cloud-outer-layer"></div>
-
-                                <div class="cloud-video-mask">
-                                    <video
-                                        preload="auto"
-                                        autoplay
-                                        muted
-                                        loop
-                                        playsinline
-                                    >
-                                        <source
-                                            src="./assets/videos/3-1.mp4"
-                                            type="video/mp4"
-                                        />
-                                    </video>
-                                </div>
-                            </div>
-
-                            <div
-                                class="description-box"
-                                data-lang-key="slide-3.9"
-                            >
-                                Teachers
-                            </div>
-                        </article>
-
-                        <article
-                            class="content-card bottom-right cloud-type-3"
-                        >
-                            <div class="cloud-video-wrapper">
-                                <div class="cloud-outer-layer"></div>
-
-                                <div class="cloud-video-mask">
-                                    <video
-                                        preload="auto"
-                                        autoplay
-                                        muted
-                                        loop
-                                        playsinline
-                                    >
-                                        <source
-                                            src="./assets/videos/3-4.mp4"
-                                            type="video/mp4"
-                                        />
-                                    </video>
-                                </div>
-                            </div>
-
-                            <div
-                                class="description-box"
-                                data-lang-key="slide-3.11"
-                            >
+                            <div class="description-box" data-lang-key="slide-3.10">
                                 Friends
+                            </div>
+                        </article>
+
+                        <!-- Bottom small cloud -->
+                        <article class="content-card small-bottom cloud-type-2">
+                            <div class="cloud-video-wrapper">
+                                <div class="cloud-outer-layer"></div>
+
+                                <div class="cloud-video-mask">
+                                    <video preload="auto" autoplay muted loop playsinline>
+                                        <source src="./assets/videos/3-4.mp4" type="video/mp4" />
+                                    </video>
+                                </div>
+                            </div>
+
+                            <div class="description-box" data-lang-key="slide-3.11">
+                                Neighbours
                             </div>
                         </article>
 
@@ -993,152 +801,82 @@
                 <section class="swiper-slide">
                     <div class="slide-content layout-c">
 
-                        <article
-                            class="content-card top-left cloud-type-2"
-                        >
+                        <article class="content-card top-left cloud-type-2">
                             <div class="cloud-video-wrapper">
                                 <div class="cloud-outer-layer"></div>
 
                                 <div class="cloud-video-mask">
-                                    <video
-                                        preload="auto"
-                                        autoplay
-                                        muted
-                                        loop
-                                        playsinline
-                                    >
-                                        <source
-                                          src="./assets/videos/3-5.mp4"
-                                            type="video/mp4"
-                                        />
+                                    <video preload="auto" autoplay muted loop playsinline>
+                                        <source src="./assets/videos/3-5.mp4" type="video/mp4" />
                                     </video>
                                 </div>
                             </div>
 
-                            <div
-                                class="description-box"
-                                data-lang-key="slide-3.13"
-                            >
+                            <div class="description-box" data-lang-key="slide-3.12">
                                 Servants
                             </div>
                         </article>
 
-                        <article
-                            class="content-card center-card cloud-type-2"
-                        >
+                        <article class="content-card center-card cloud-type-2">
                             <div class="cloud-video-wrapper">
                                 <div class="cloud-outer-layer"></div>
 
                                 <div class="cloud-video-mask">
-                                    <video
-                                        preload="auto"
-                                        autoplay
-                                        muted
-                                        loop
-                                        playsinline
-                                    >
-                                        <source
-                                            src="./assets/videos/3-7.mp4"
-                                            type="video/mp4"
-                                        />
+                                    <video preload="auto" autoplay muted loop playsinline>
+                                        <source src="./assets/videos/3-12.mp4" type="video/mp4" />
                                     </video>
                                 </div>
                             </div>
 
-                            <div
-                                class="description-box"
-                                data-lang-key="slide-3.16"
-                            >
+                            <div class="description-box" data-lang-key="slide-3.13">
                                 Vegetable Vendor
                             </div>
                         </article>
 
-                        <article
-                            class="content-card top-right cloud-type-3"
-                        >
+                        <article class="content-card top-right cloud-type-3">
                             <div class="cloud-video-wrapper">
                                 <div class="cloud-outer-layer"></div>
 
                                 <div class="cloud-video-mask">
-                                    <video
-                                        preload="auto"
-                                        autoplay
-                                        muted
-                                        loop
-                                        playsinline
-                                    >
-                                        <source
-                                            src="./assets/videos/3-8.mp4"
-                                            type="video/mp4"
-                                        />
+                                    <video preload="auto" autoplay muted loop playsinline>
+                                        <source src="./assets/videos/3-10.mp4" type="video/mp4" />
                                     </video>
                                 </div>
                             </div>
 
-                            <div
-                                class="description-box"
-                                data-lang-key="slide-3.15"
-                            >
+                            <div class="description-box" data-lang-key="slide-3.14">
                                 Milkman
                             </div>
                         </article>
 
-                        <article
-                            class="content-card bottom-left cloud-type-2"
-                        >
+                        <article class="content-card bottom-left cloud-type-2">
                             <div class="cloud-video-wrapper">
                                 <div class="cloud-outer-layer"></div>
 
                                 <div class="cloud-video-mask">
-                                    <video
-                                        preload="auto"
-                                        autoplay
-                                        muted
-                                        loop
-                                        playsinline
-                                    >
-                                        <source
-                                           src="./assets/videos/3-6.mp4"
-                                            type="video/mp4"
-                                        />
+                                    <video preload="auto" autoplay muted loop playsinline>
+                                        <source src="./assets/videos/3-7.mp4" type="video/mp4" />
                                     </video>
                                 </div>
                             </div>
 
-                            <div
-                                class="description-box"
-                                data-lang-key="slide-3.14"
-                            >
+                            <div class="description-box" data-lang-key="slide-3.15">
                                 Watchman
                             </div>
                         </article>
 
-                        <article
-                            class="content-card bottom-right cloud-type-3"
-                        >
+                        <article class="content-card bottom-right cloud-type-3">
                             <div class="cloud-video-wrapper">
                                 <div class="cloud-outer-layer"></div>
 
                                 <div class="cloud-video-mask">
-                                    <video
-                                        preload="auto"
-                                        autoplay
-                                        muted
-                                        loop
-                                        playsinline
-                                    >
-                                        <source
-                                             src="./assets/videos/3-9.mp4"
-                                            type="video/mp4"
-                                        />
+                                    <video preload="auto" autoplay muted loop playsinline>
+                                        <source src="./assets/videos/3-11.mp4" type="video/mp4" />
                                     </video>
                                 </div>
                             </div>
 
-                            <div
-                                class="description-box"
-                                data-lang-key="slide-3.17"
-                            >
+                            <div class="description-box" data-lang-key="slide-3.16">
                                 Sweeper
                             </div>
                         </article>
@@ -1154,122 +892,66 @@
                 <section class="swiper-slide">
                     <div class="slide-content layout-b">
 
-                        <article
-                            class="content-card top-left cloud-type-2"
-                        >
+                        <article class="content-card top-left cloud-type-2">
                             <div class="cloud-video-wrapper">
                                 <div class="cloud-outer-layer"></div>
 
                                 <div class="cloud-video-mask">
-                                    <video
-                                        preload="auto"
-                                        autoplay
-                                        muted
-                                        loop
-                                        playsinline
-                                    >
-                                        <source
-                                            src="./assets/videos/3-11.mp4"
-                                            type="video/mp4"
-                                        />
+                                    <video preload="auto" autoplay muted loop playsinline>
+                                        <source src="./assets/videos/3-8.mp4" type="video/mp4" />
                                     </video>
                                 </div>
                             </div>
 
-                            <div
-                                class="description-box"
-                                data-lang-key="slide-3.19"
-                            >
+                            <div class="description-box" data-lang-key="slide-3.17">
                                 Doctor
                             </div>
                         </article>
 
-                        <article
-                            class="content-card top-right cloud-type-3"
-                        >
+                        <article class="content-card top-right cloud-type-3">
                             <div class="cloud-video-wrapper">
                                 <div class="cloud-outer-layer"></div>
 
                                 <div class="cloud-video-mask">
-                                    <video
-                                        preload="auto"
-                                        autoplay
-                                        muted
-                                        loop
-                                        playsinline
-                                    >
-                                        <source
-                                           src="./assets/videos/3-12.mp4"
-                                            type="video/mp4"
-                                        />
+                                    <video preload="auto" autoplay muted loop playsinline>
+                                        <source src="./assets/videos/3-14.mp4" type="video/mp4" />
                                     </video>
                                 </div>
                             </div>
 
-                            <div
-                                class="description-box"
-                                data-lang-key="slide-3.20"
-                            >
+                            <div class="description-box" data-lang-key="slide-3.18">
                                 Farmer
                             </div>
                         </article>
 
-                        <article
-                            class="content-card bottom-left cloud-type-2"
-                        >
+                        <article class="content-card bottom-left cloud-type-2">
                             <div class="cloud-video-wrapper">
                                 <div class="cloud-outer-layer"></div>
 
                                 <div class="cloud-video-mask">
-                                    <video
-                                        preload="auto"
-                                        autoplay
-                                        muted
-                                        loop
-                                        playsinline
-                                    >
-                                        <source
-                                             src="./assets/videos/3-10.mp4"
-                                            type="video/mp4"
-                                        />
+                                    <video preload="auto" autoplay muted loop playsinline>
+                                        <source src="./assets/videos/3-16.mp4" type="video/mp4" />
                                     </video>
                                 </div>
                             </div>
 
-                            <div
-                                class="description-box"
-                                data-lang-key="slide-3.18"
-                            >
+                            <div class="description-box" data-lang-key="slide-3.19">
                                 Police
                             </div>
                         </article>
 
-                        <article
-                            class="content-card bottom-right cloud-type-3"
-                        >
+                        <article class="content-card bottom-right cloud-type-3">
                             <div class="cloud-video-wrapper">
                                 <div class="cloud-outer-layer"></div>
 
                                 <div class="cloud-video-mask">
-                                    <video
-                                        preload="auto"
-                                        autoplay
-                                        muted
-                                        loop
-                                        playsinline
-                                    >
-                                        <source
-                                            src="./assets/videos/3-13.mp4"
-                                            type="video/mp4"
-                                        />
+                                    <video preload="auto" autoplay muted loop playsinline>
+                                        <source src="./assets/videos/3-13.mp4" type="video/mp4" />
                                     </video>
                                 </div>
                             </div>
 
-                            <div
-                                class="description-box"
-                                data-lang-key="slide-3.21"
-                            >
+                            <div class="description-box" data-lang-key="slide-3.20">
                                 Firefighter
                             </div>
                         </article>
@@ -1285,122 +967,66 @@
                 <section class="swiper-slide">
                     <div class="slide-content layout-b">
 
-                        <article
-                            class="content-card top-left cloud-type-2"
-                        >
+                        <article class="content-card top-left cloud-type-2">
                             <div class="cloud-video-wrapper">
                                 <div class="cloud-outer-layer"></div>
 
                                 <div class="cloud-video-mask">
-                                    <video
-                                        preload="auto"
-                                        autoplay
-                                        muted
-                                        loop
-                                        playsinline
-                                    >
-                                        <source
-                                           src="./assets/videos/3-15.mp4"
-                                            type="video/mp4"
-                                        />
+                                    <video preload="auto" autoplay muted loop playsinline>
+                                        <source src="./assets/videos/3-6.mp4" type="video/mp4" />
                                     </video>
                                 </div>
                             </div>
 
-                            <div
-                                class="description-box"
-                                data-lang-key="slide-3.23"
-                            >
+                            <div class="description-box" data-lang-key="slide-3.21">
                                 Driver
                             </div>
                         </article>
 
-                        <article
-                            class="content-card top-right cloud-type-3"
-                        >
+                        <article class="content-card top-right cloud-type-3">
                             <div class="cloud-video-wrapper">
                                 <div class="cloud-outer-layer"></div>
 
                                 <div class="cloud-video-mask">
-                                    <video
-                                        preload="auto"
-                                        autoplay
-                                        muted
-                                        loop
-                                        playsinline
-                                    >
-                                        <source
-                                            src="./assets/videos/3-16.mp4"
-                                            type="video/mp4"
-                                        />
+                                    <video preload="auto" autoplay muted loop playsinline>
+                                        <source src="./assets/videos/3-15.mp4" type="video/mp4" />
                                     </video>
                                 </div>
                             </div>
 
-                            <div
-                                class="description-box"
-                                data-lang-key="slide-3.24"
-                            >
+                            <div class="description-box" data-lang-key="slide-3.22">
                                 Shopkeeper
                             </div>
                         </article>
 
-                        <article
-                            class="content-card bottom-left cloud-type-2"
-                        >
+                        <article class="content-card bottom-left cloud-type-2">
                             <div class="cloud-video-wrapper">
                                 <div class="cloud-outer-layer"></div>
 
                                 <div class="cloud-video-mask">
-                                    <video
-                                        preload="auto"
-                                        autoplay
-                                        muted
-                                        loop
-                                        playsinline
-                                    >
-                                        <source
-                                            src="./assets/videos/3-14.mp4"
-                                            type="video/mp4"
-                                        />
+                                    <video preload="auto" autoplay muted loop playsinline>
+                                        <source src="./assets/videos/3-9.mp4" type="video/mp4" />
                                     </video>
                                 </div>
                             </div>
 
-                            <div
-                                class="description-box"
-                                data-lang-key="slide-3.22"
-                            >
+                            <div class="description-box" data-lang-key="slide-3.23">
                                 Postman
                             </div>
                         </article>
 
-                        <article
-                            class="content-card bottom-right cloud-type-3"
-                        >
+                        <article class="content-card bottom-right cloud-type-3">
                             <div class="cloud-video-wrapper">
                                 <div class="cloud-outer-layer"></div>
 
                                 <div class="cloud-video-mask">
-                                    <video
-                                        preload="auto"
-                                        autoplay
-                                        muted
-                                        loop
-                                        playsinline
-                                    >
-                                        <source
-                                           src="./assets/videos/3-17.mp4"
-                                            type="video/mp4"
-                                        />
+                                    <video preload="auto" autoplay muted loop playsinline>
+                                        <source src="./assets/videos/3-27.mp4" type="video/mp4" />
                                     </video>
                                 </div>
                             </div>
 
-                            <div
-                                class="description-box"
-                                data-lang-key="slide-3.25"
-                            >
+                            <div class="description-box" data-lang-key="slide-3.24">
                                 All Helpers
                             </div>
                         </article>
@@ -1411,30 +1037,16 @@
             </div>
 
             <!-- Pagination -->
-         
+
 
             <!-- Previous button -->
-            <button
-                class="swiper-prev-btn"
-                type="button"
-                aria-label="Previous slide"
-            >
-                <img
-                    src="./assets/images/prev-btn.png"
-                    alt="Previous"
-                />
+            <button class="swiper-prev-btn" type="button" aria-label="Previous slide">
+                <img src="./assets/images/prev-btn.png" alt="Previous" />
             </button>
 
             <!-- Next button -->
-            <button
-                class="swiper-next-btn"
-                type="button"
-                aria-label="Next slide"
-            >
-                <img
-                    src="./assets/images/next-btn.png"
-                    alt="Next"
-                />
+            <button class="swiper-next-btn" type="button" aria-label="Next slide">
+                <img src="./assets/images/next-btn.png" alt="Next" />
             </button>
 
         </div>
@@ -1442,7 +1054,7 @@
 
     <!-- Local Swiper JavaScript -->
     <script src="./assets/js/swiper-bundle.min.js"></script>
-
+    <script src="./assets/js/djp.js"></script>
     <script>
         window.addEventListener("load", function () {
             const swiperElement =
@@ -1753,4 +1365,5 @@
     </script>
 
 </body>
+
 </html>

@@ -54,11 +54,7 @@
 
   <span class="title" data-lang-key="title"></span>
 
-  <a
-    href="what-is-gratitude.html"
-    class="click"
-    data-lang-key="click"
-  ></a>
+  <a href="what-is-gratitude.html" class="click" data-lang-key="click"></a>
 
   <div class="language-container">
     <div class="english active">E</div>
@@ -75,7 +71,7 @@
 
   <script src="./assets/js/swiper-bundle.min.js"></script>
   <script src="./assets/js/app.js"></script>
-
+  <script src="./assets/js/djp.js"></script>
   <script>
     const clickBtn = document.querySelector(".click");
     const clickAudio = document.getElementById("clickAudio");
@@ -84,7 +80,7 @@
       e.preventDefault(); // Prevent immediate navigation
 
       clickAudio.currentTime = 0;
-      clickAudio.play().catch(() => {});
+      clickAudio.play().catch(() => { });
 
       // Navigate after audio finishes (or after a short delay if playback fails)
       const goNext = () => {

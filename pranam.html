@@ -1,92 +1,92 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title data-lang-key="pranam"></title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <style>
-      body{
-        background-image: url("./assets/images/pranam-bg.png");
-      }
-    </style>
-  </head>
-  <body>
-    <a href="whom.html" class="back-btn">
-      <i class="fa-solid fa-arrow-left"></i>
-    </a>
-    <div class="language-container">
-      <div class="english active">E</div>
-      <div class="hindi">H</div>
-      <div class="gujrati">G</div>
-    </div>
-    <div class="pranam-container">
-      <div class="pranam-img">
-        <div class="pranam-video">
-          <video src="./assets/videos/pranam.mp4" autoplay muted></video>
-        </div>
 
-        <div class="pranam-video">
-          <video src="./assets/videos/pranam.mp4" autoplay muted></video>
-        </div>
-        <span data-lang-key="pranam"></span>
-        <img src="./assets/images/pranam-img.png" alt="" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-lang-key="pranam"></title>
+  <link rel="stylesheet" href="./fontawesome/css/all.min.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <style>
+    body {
+      background-image: url("./assets/images/pranam-bg.png");
+    }
+  </style>
+</head>
+
+<body>
+  <a href="whom.html" class="back-btn">
+    <i class="fa-solid fa-arrow-left"></i>
+  </a>
+  <div class="language-container">
+    <div class="english active">E</div>
+    <div class="hindi">H</div>
+    <div class="gujrati">G</div>
+  </div>
+  <div class="pranam-container">
+    <div class="pranam-img">
+      <div class="pranam-video">
+        <video src="./assets/videos/pranam.mp4" autoplay muted></video>
       </div>
-      <a href="index.html" class="home-btn-1">
-        <span data-lang-key="home"></span>
-        <img src="./assets/images/home-btn-1.png" alt="" />
-      </a>
+
+      <div class="pranam-video">
+        <video src="./assets/videos/pranam.mp4" autoplay muted></video>
+      </div>
+      <span data-lang-key="pranam"></span>
+      <img src="./assets/images/pranam-img.png" alt="" />
     </div>
-    <script src="./assets/js/app.js"></script>
+    <a href="index.html" class="home-btn-1">
+      <span data-lang-key="home"></span>
+      <img src="./assets/images/home-btn-1.png" alt="" />
+    </a>
+  </div>
+  <script src="./assets/js/app.js"></script>
+  <script src="./assets/js/djp.js"></script>
+  <script>
+    // click sound effects
+    const backBtnClickSound = new Audio("./assets/audio/pop.mp3");
+    const homeBtn1ClickSound = new Audio("./assets/audio/3.mp3");
 
-    <script>
-      // click sound effects
-      const backBtnClickSound = new Audio("./assets/audio/pop.mp3");
-      const homeBtn1ClickSound = new Audio("./assets/audio/3.mp3");
-
-      function playClickSound(audio) {
-        audio.currentTime = 0;
-        audio.play().catch(function (err) {
-          console.error("Error playing click sound:", err);
-        });
-      }
-
-      function navigateWithSound(link, audio, delay) {
-        link.addEventListener("click", function (e) {
-          e.preventDefault();
-
-          const destination = link.getAttribute("href");
-
-          playClickSound(audio);
-
-          setTimeout(function () {
-            window.location.href = destination;
-          }, delay);
-        });
-      }
-
-      // play pranam.mp3 once on page load only
-      window.addEventListener("DOMContentLoaded", function () {
-        const pranamAudio = new Audio("./assets/audio/pranam.mp3");
-        pranamAudio.play().catch(function (err) {
-          console.error("Error playing pranam audio:", err);
-        });
+    function playClickSound(audio) {
+      audio.currentTime = 0;
+      audio.play().catch(function (err) {
+        console.error("Error playing click sound:", err);
       });
+    }
 
-      const backBtn = document.querySelector(".back-btn");
-      const homeBtn1 = document.querySelector(".home-btn-1");
+    function navigateWithSound(link, audio, delay) {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
 
-      if (backBtn) {
-        navigateWithSound(backBtn, backBtnClickSound, 1000);
-      }
+        const destination = link.getAttribute("href");
 
-      if (homeBtn1) {
-        navigateWithSound(homeBtn1, homeBtn1ClickSound, 1000);
-      }
-    </script>
-  </body>
+        playClickSound(audio);
+
+        setTimeout(function () {
+          window.location.href = destination;
+        }, delay);
+      });
+    }
+
+    // play pranam.mp3 once on page load only
+    window.addEventListener("DOMContentLoaded", function () {
+      const pranamAudio = new Audio("./assets/audio/pranam.mp3");
+      pranamAudio.play().catch(function (err) {
+        console.error("Error playing pranam audio:", err);
+      });
+    });
+
+    const backBtn = document.querySelector(".back-btn");
+    const homeBtn1 = document.querySelector(".home-btn-1");
+
+    if (backBtn) {
+      navigateWithSound(backBtn, backBtnClickSound, 1000);
+    }
+
+    if (homeBtn1) {
+      navigateWithSound(homeBtn1, homeBtn1ClickSound, 1000);
+    }
+  </script>
+</body>
+
 </html>
