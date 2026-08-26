@@ -189,6 +189,18 @@
             pointer-events: none;
         }
 
+        .cloud-video-mask video.video-wide {
+            width: 108%;
+            height: 100%;
+
+            display: block;
+
+            object-fit: cover;
+            object-position: center;
+
+            pointer-events: none;
+        }
+
         /* ========================================
            DESCRIPTION BOX
         ======================================== */
@@ -730,7 +742,7 @@
                                 <div class="cloud-outer-layer"></div>
 
                                 <div class="cloud-video-mask">
-                                    <video preload="auto" autoplay muted loop playsinline>
+                                    <video class="video-wide" preload="auto" autoplay muted loop playsinline>
                                         <source src="./assets/videos/3-25.mp4" type="video/mp4" />
                                     </video>
                                 </div>
