@@ -11,8 +11,14 @@
 </head>
 
 <style>
-  body {
-    background-image: url("./assets/images/bg.png");
+  .bg-video {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    pointer-events: none;
   }
 
   .click {
@@ -40,16 +46,11 @@
     border: 0.3vw solid #FFDE72;
   }
 
-  .hero {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%) scale(1);
-    width: 70%;
-  }
 </style>
 
 <body>
+
+  <video class="bg-video" src="./assets/videos/bg.mp4" autoplay muted loop playsinline preload="auto"></video>
 
   <span class="title" data-lang-key="title"></span>
 
@@ -61,7 +62,6 @@
     <div class="gujrati">G</div>
   </div>
 
-  <img src="./assets/videos/hero.gif" class="hero" alt="">
 
   <!-- Click Audio -->
   <audio id="clickAudio" preload="auto">
