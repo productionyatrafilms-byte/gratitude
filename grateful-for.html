@@ -463,7 +463,7 @@
 
                                 <div class="cloud-video-mask">
 
-                                    <video preload="auto" autoplay muted loop playsinline>
+                                    <video preload="none" muted loop playsinline>
 
                                         <source src="./assets/videos/2-1.mp4" type="video/mp4" />
 
@@ -495,7 +495,7 @@
 
                                 <div class="cloud-video-mask">
 
-                                    <video preload="auto" autoplay muted loop playsinline>
+                                    <video preload="none" muted loop playsinline>
 
                                         <source src="./assets/videos/2-2.mp4" type="video/mp4" />
 
@@ -539,7 +539,7 @@
 
                                 <div class="cloud-video-mask">
 
-                                    <video preload="auto" autoplay muted loop playsinline>
+                                    <video preload="none" muted loop playsinline>
 
                                         <source src="./assets/videos/2-3.mp4" type="video/mp4" />
 
@@ -571,7 +571,7 @@
 
                                 <div class="cloud-video-mask">
 
-                                    <video preload="auto" autoplay muted loop playsinline>
+                                    <video preload="none" muted loop playsinline>
 
                                         <source src="./assets/videos/2-4.mp4" type="video/mp4" />
 
@@ -615,7 +615,7 @@
 
                                 <div class="cloud-video-mask">
 
-                                    <video preload="auto" autoplay muted loop playsinline>
+                                    <video preload="none" muted loop playsinline>
 
                                         <source src="./assets/videos/2-5.mp4" type="video/mp4" />
 
@@ -647,7 +647,7 @@
 
                                 <div class="cloud-video-mask">
 
-                                    <video preload="auto" autoplay muted loop playsinline>
+                                    <video preload="none" muted loop playsinline>
 
                                         <source src="./assets/videos/2-6.mp4" type="video/mp4" />
 
@@ -709,7 +709,6 @@
     ======================================== -->
 
     <script src="./assets/js/swiper-bundle.min.js"></script>
-    <script src="./assets/js/djp.js"></script>
 
 
     <!-- ========================================
@@ -872,12 +871,44 @@
                                 "Swiper initialized successfully."
                             );
 
+                            controlSlideVideos(this);
+
+                        },
+
+                        slideChangeTransitionEnd: function () {
+
+                            controlSlideVideos(this);
+
                         },
 
                     },
 
                 }
             );
+
+
+            /* ======================================
+               SLIDE VIDEOS - only the active slide's videos load and play
+            ====================================== */
+
+            function controlSlideVideos(swiper) {
+                swiperElement.querySelectorAll("video").forEach(function (video) {
+                    video.pause();
+                    video.preload = "none";
+                });
+
+                const activeSlide = swiper.slides[swiper.activeIndex];
+
+                if (!activeSlide) {
+                    return;
+                }
+
+                activeSlide.querySelectorAll("video").forEach(function (video) {
+                    video.preload = "auto";
+                    video.currentTime = 0;
+                    video.play().catch(function () {});
+                });
+            }
 
 
             /* ======================================

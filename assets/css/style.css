@@ -6,17 +6,10 @@
 
 @font-face {
   font-family: "BalooRegular";
-  src: url("../../fonts/Baloo Regular 400.ttf") format("truetype");
+  src: url("../../fonts/Baloo-Regular-400.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-}
-
-@font-face {
-  font-family: "BerkshireSwash";
-  src: url("../../fonts/BerkshireSwash-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
 }
 
 @font-face {
@@ -73,7 +66,6 @@ body {
 body {
   width: 100vw !important;
   height: 100%;
-  background-image: url("../images/bg-image.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -302,7 +294,6 @@ body[data-lang="hi"] .num, body[data-lang="gu"] .num {
     position: absolute;
     left: 50%;
     top: 48.6%;
-    background-image: url("./../images/pranam-bg-1.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
